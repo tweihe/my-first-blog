@@ -4,13 +4,33 @@
     </head>
     <body>
         <div>
-        <h1>Thomas's Project</h1>
-        <p>Hi there!</p>
-        <p>Here is the page for my project.</p>
+        <h1>Essay Maker</h1>
+        <p>Create your own custom essay using the options below.</p>
         </div>
+
+        <form action="/essay/" method="post">{% csrf_token %}
+            <label for="length">Length: (in paragraphs)</label>
+            <select id = "length" name="length">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <br>
+            <label for="complexity">Complexity: </label>
+            <select id = "complexity" name="complexity">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+            <br>
+            <br>
+            <input type="submit" value="Create Essay">
+        </form>
+        <br>
         <div>
-        <p>I hope it gets online soon!</p>
-        <a href="">Here is a test</a>
+        <a href="">Bibliography</a>
         </div>
     </body>
 </html>
